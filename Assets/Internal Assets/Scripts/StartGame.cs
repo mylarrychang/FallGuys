@@ -14,4 +14,14 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
+
+    public void MainPage()
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    public void Ranking()
+    {
+        SceneManager.LoadScene(SceneManager.sceneCount - 1, LoadSceneMode.Single);
+    }
 }

@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2654018337731485086}
   - component: {fileID: 8899808219374595734}
   - component: {fileID: 2235996024445047706}
-  - component: {fileID: 8940446158014333283}
+  - component: {fileID: 5102969020441091039}
   m_Layer: 5
   m_Name: ReturnHomeButton
   m_TagString: Untagged
@@ -201,9 +201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8940446158014333283}
-        m_TargetAssemblyTypeName: ReturnHome, Assembly-CSharp
-        m_MethodName: Return
+      - m_Target: {fileID: 5102969020441091039}
+        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
+        m_MethodName: MainPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -213,7 +213,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8940446158014333283
+--- !u!114 &5102969020441091039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,6 +222,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4531927524769057291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b17b432e027344699c9f3b01eeff5b2, type: 3}
+  m_Script: {fileID: 11500000, guid: baf7a3d484399464180c9756df91cdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
