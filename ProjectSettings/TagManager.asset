@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Slide
+  - Joystick
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,5 +29,25 @@ public class CharacterSelection : MonoBehaviour
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
+    }
+
+    public void StartNetworkGameHost()
+    {
+
+        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        PlayerPrefs.SetInt("isClient", 1);
+
+
+        // TODO: 2 is network level 1
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
+
+    public void StartNetworkGameClient()
+    {
+        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        PlayerPrefs.SetInt("isClient", 0);
+
+        // TODO: 2 is network level 1
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
     }
 }
