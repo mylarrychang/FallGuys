@@ -39,7 +39,15 @@ public class NetworkCharacterControls : NetworkBehaviour {
 	bool IsGrounded (){
 		return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
 	}
-	
+
+	// Here' IAM setting the camera for each player.....
+	// Cost me a whole day to figure it out :(
+	public override void OnNetworkSpawn()
+	{ // This is basically a Start method
+		cam.SetActive(IsOwner);
+		base.OnNetworkSpawn(); // Not sure if this is needed though, but good to have it.
+	}
+
 	void Awake () {
 		rb = GetComponent<Rigidbody>();
 		rb.freezeRotation = true;
