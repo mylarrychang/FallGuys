@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour {
+public class NetworkCameraManager : NetworkBehaviour {
 
 	public float followSpeed = 3; //Speed ​​at which the camera follows us
 	public float mouseSpeed = 2; //Speed ​​at which we rotate the camera with the mouse
@@ -35,17 +36,17 @@ public class CameraManager : MonoBehaviour {
 
 	void FollowTarget(float d)
 	{ //Function that makes the camera follow the player
+		// if (!IsOwner) return;
+
 		/*
 		if (target == null)
 		{
 			// Find the target.....
-			GameObject player = GameObject.Find("Player");
+			GameObject player = GameObject.FindWithTag("Player");
 			Debug.Log("finding::::: " + player);
 			target = player.transform;
 		}
 		*/
-
-		Debug.Log("Trying to follow");
 
 		float speed = d * followSpeed; //Set speed regardless of fps
 		Vector3 targetPosition = Vector3.Lerp(transform.position, target.position, speed); //Bring the camera closer to the player interpolating with the velocity(0.5 half, 1 everything)
@@ -115,10 +116,9 @@ public class CameraManager : MonoBehaviour {
 		camTrans.localPosition = new Vector3(0, 0, -dist);
 	}
 
-	public static CameraManager singleton; //You can call CameraManager.singleton from other script (There can be only one)
+	// public static NetworkCameraManager singleton; //You can call CameraManager.singleton from other script (There can be only one)
 	void Awake()
 	{
-		singleton = this; //Self-assigns
 		Init();
 	}
 

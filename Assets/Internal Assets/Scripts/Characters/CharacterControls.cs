@@ -126,13 +126,13 @@ public class CharacterControls : MonoBehaviour {
 
 	private void Update()
 	{
-		/*
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
-		*/
 
+		/*
 		float h = joystick.Horizontal;
 		float v = joystick.Vertical;
+		*/
 
 		// buggy: used by both joystick and keyboard.
 		/*

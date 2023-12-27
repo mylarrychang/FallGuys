@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class NetworkLoadCharacters : MonoBehaviour
 {
+    // [SerializeField] private Transform camera;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Transform transform = Instantiate(camera);
+        // transform.gameObject.SetActive(true);
 
         int isClient = PlayerPrefs.GetInt("isClient");
 
@@ -21,5 +25,6 @@ public class NetworkLoadCharacters : MonoBehaviour
             Debug.Log("Starting as a host..");
             NetworkManager.Singleton.StartHost();
 	    }
+        // NetworkManager.Singleton.StartHost();
     }
 }

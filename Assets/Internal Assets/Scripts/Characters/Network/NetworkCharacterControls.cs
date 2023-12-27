@@ -47,10 +47,22 @@ public class NetworkCharacterControls : NetworkBehaviour {
 
 		checkPoint = transform.position;
 		Cursor.visible = false;
+
+		// Find the target.....
+		// Add myself to camera...
+		Debug.Log("Tring to find the camera.....");
+		/*
+		if (IsOwner)
+		{ 
+			GameObject camera = GameObject.FindWithTag("NetworkCam");
+			Debug.Log("finding::::: came: " + camera);
+			camera.GetComponent<NetworkCameraManager>().target = transform;
+		}
+		*/
 	}
-	
-	void FixedUpdate () {
-		Debug.Log("Is woner: " + IsOwner);
+
+    void FixedUpdate () {
+		// Debug.Log("Is woner: " + IsOwner);
 		if (!IsOwner) return;
 
 		if (canMove)
