@@ -7,13 +7,16 @@ public class StartGame : MonoBehaviour
 {
     public void StartNewGame()
     {
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        Debug.Log("current scen: " + SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
+    /*
     public void Options()
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
+    */
 
     public void MainPage()
     {
