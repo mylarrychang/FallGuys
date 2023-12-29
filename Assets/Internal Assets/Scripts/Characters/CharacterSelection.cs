@@ -11,7 +11,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void NextCharacter()
     {
-        Debug.Log("In next character: " + selectedCharacter);
+        // Debug.Log("In next character: " + selectedCharacter);
         characters[selectedCharacter].SetActive(false);
         selectedCharacter = (selectedCharacter + 1) % characters.Length;
         characters[selectedCharacter].SetActive(true);

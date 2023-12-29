@@ -9,6 +9,8 @@ TagManager:
   - Joystick
   - NetworkCam
   - New tag
+  - Login
+  - Start
   layers:
   - Default
   - TransparentFX

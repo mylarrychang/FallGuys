@@ -16,12 +16,12 @@ public class Bounce : MonoBehaviour
 			if (collision.gameObject.tag == "Player")
 			{
 				hitDir = contact.normal;
-				collision.gameObject.GetComponent<NetworkCharacterControls>().HitPlayer(-hitDir * force, stunTime);
+				collision.gameObject.GetComponent<CharacterControls>().HitPlayer(-hitDir * force, stunTime);
 				return;
 			}
 		}
-		/*if (collision.relativeVelocity.magnitude > 2)
-		{
+		/*if (collision.relativeVelocity.magnitude > 2：)
+		：{
 			if (collision.gameObject.tag == "Player")
 			{
 				//Debug.Log("Hit");

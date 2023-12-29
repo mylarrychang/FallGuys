@@ -45,7 +45,7 @@ public class CameraManager : MonoBehaviour {
 		}
 		*/
 
-		Debug.Log("Trying to follow");
+		// Debug.Log("Trying to follow");
 
 		float speed = d * followSpeed; //Set speed regardless of fps
 		Vector3 targetPosition = Vector3.Lerp(transform.position, target.position, speed); //Bring the camera closer to the player interpolating with the velocity(0.5 half, 1 everything)
