@@ -12,16 +12,14 @@ GameObject:
   - component: {fileID: 2669931010338799364}
   - component: {fileID: 4395691245891353492}
   - component: {fileID: 6656791266026413044}
-  - component: {fileID: 1971101015429734474}
   - component: {fileID: 8127399456647742888}
-  - component: {fileID: -3793186801924946614}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1513722093211860994
 Transform:
   m_ObjectHideFlags: 0
@@ -110,28 +108,6 @@ CapsuleCollider:
   m_Height: 4.934292
   m_Direction: 1
   m_Center: {x: 0, y: 2.2872972, z: -0.49755305}
---- !u!114 &1971101015429734474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215103935117340176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eae64db582b14544b6dffe686b12fb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  airVelocity: 8
-  gravity: 40
-  maxVelocityChange: 10
-  jumpHeight: 2
-  maxFallSpeed: 20
-  rotateSpeed: 25
-  cam: {fileID: 0}
-  joystick: {fileID: 0}
-  checkPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &8127399456647742888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,26 +123,6 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!114 &-3793186801924946614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215103935117340176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 0
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
 --- !u!1 &3650312145135069126
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,14 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4631b3db542d84130a90154678632ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshes:
-  - {fileID: 4300016, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
-  - {fileID: 4300014, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
-  - {fileID: 4300012, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
-  materials:
-  - {fileID: 2100000, guid: 996ef1533dff84eaaab65486d0aef265, type: 2}
-  - {fileID: 2100000, guid: eabbb085e6565429a87ed0c501d4afda, type: 2}
-  - {fileID: 2100000, guid: 19f853f9ac9404cb1a4ab42902b19437, type: 2}
+  style: {fileID: 0}
 --- !u!1 &8406521559562081214
 GameObject:
   m_ObjectHideFlags: 0

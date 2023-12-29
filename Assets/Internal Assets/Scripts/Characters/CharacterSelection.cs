@@ -6,23 +6,37 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject[] characters;
-    public int selectedCharacter = 0;
+    public Style style;
+    private int selectedCharacter = 0;
+
+    private void UpdateCharacter()
+    { 
+        SkinnedMeshRenderer skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
+        skinnedMeshRenderer.sharedMesh = style.meshes[selectedCharacter];
+
+        Material[] mats = skinnedMeshRenderer.materials;
+        mats[0] = style.materials[selectedCharacter];
+        skinnedMeshRenderer.materials = mats;
+    }
+
+    public void Start()
+    {
+        selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
+        UpdateCharacter();
+    }
 
     public void NextCharacter()
     {
-        // Debug.Log("In next character: " + selectedCharacter);
-        characters[selectedCharacter].SetActive(false);
-        selectedCharacter = (selectedCharacter + 1) % characters.Length;
-        characters[selectedCharacter].SetActive(true);
+        Debug.Log("In next character: " + selectedCharacter);
+        selectedCharacter = (selectedCharacter + 1) % style.meshes.Length;
+        UpdateCharacter();
     }
 
     public void PreviousCharacter()
     {
         Debug.Log("In previous character: " + selectedCharacter);
-        characters[selectedCharacter].SetActive(false);
-        selectedCharacter = (--selectedCharacter + characters.Length) % characters.Length;
-        characters[selectedCharacter].SetActive(true);
+        selectedCharacter = (--selectedCharacter + style.meshes.Length) % style.meshes.Length;
+        UpdateCharacter();
     }
 
     public void StartGame()

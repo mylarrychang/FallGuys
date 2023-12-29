@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5138911029212828073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771009356843511860}
+  - component: {fileID: 2203629726233185261}
+  m_Layer: 0
+  m_Name: Style
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771009356843511860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138911029212828073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2203629726233185261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138911029212828073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7755fba96a64a6f9e4a68e65d359e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshes:
+  - {fileID: 4300014, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300008, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300012, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300016, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300010, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300002, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300006, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300018, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  - {fileID: 4300004, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
+  materials:
+  - {fileID: 2100000, guid: eabbb085e6565429a87ed0c501d4afda, type: 2}
+  - {fileID: 2100000, guid: 3deb399eba70a4fff80e02a3daed660c, type: 2}
+  - {fileID: 2100000, guid: 19f853f9ac9404cb1a4ab42902b19437, type: 2}
+  - {fileID: 2100000, guid: 996ef1533dff84eaaab65486d0aef265, type: 2}
+  - {fileID: 2100000, guid: de73ca16265e944e8bb8dd1de609cbb2, type: 2}
+  - {fileID: 2100000, guid: 8dba92f31f33146d5bc5a037128c4231, type: 2}
+  - {fileID: 2100000, guid: 774ce2d7aee494528980077e8e22b343, type: 2}
+  - {fileID: 2100000, guid: 0031d703677d34f0bbc30cb4e6fe3e9f, type: 2}
+  - {fileID: 2100000, guid: d568be3d2e6cb436d955e0f0ed071b1a, type: 2}
+  names:
+  - DJ
+  - Doctor
+  - FoodDelievery
+  - GymInstructor
+  - HoodieCap
+  - Nurse
+  - RedDress
+  - Thief
+  - Waiter
