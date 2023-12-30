@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 [RequireComponent (typeof (Rigidbody))]
@@ -13,8 +14,11 @@ public class CharacterControls : MonoBehaviour {
 	public float jumpHeight = 2.0f;
 	public float maxFallSpeed = 20.0f;
 	public float rotateSpeed = 25f; //Speed the player rotate
-	private Vector3 moveDir;
+
 	public GameObject cam;
+	public Button jumpButton;
+
+	private Vector3 moveDir;
 	private Rigidbody rb;
 
 	private float distToGround;
@@ -33,6 +37,13 @@ public class CharacterControls : MonoBehaviour {
 	void  Start (){
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
+		jumpButton.onClick.AddListener(() =>
+		{
+			if (IsGrounded())
+			{
+				rb.velocity = new Vector3(rb.velocity.x, CalculateJumpVerticalSpeed(), rb.velocity.z);
+			}
+		});
 	}
 	
 	bool IsGrounded (){
@@ -91,11 +102,13 @@ public class CharacterControls : MonoBehaviour {
 					//Debug.Log(rb.velocity.magnitude);
 				}
 
+				/*
 				// Jump
 				if (IsGrounded() && Input.GetButton("Jump"))
 				{
 					rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
 				}
+				*/
 			}
 			else
 			{
