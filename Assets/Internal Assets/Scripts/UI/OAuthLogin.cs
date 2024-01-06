@@ -15,6 +15,7 @@ public class OAuthLogin : MonoBehaviour
 
     WebSocket ws;
     bool isAuthed = false;
+
     /** Will be returned from the ws server.. */ 
     string type;
     string userId;
