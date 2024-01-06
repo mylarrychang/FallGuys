@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Ricimi;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class KillZone : MonoBehaviour
 {
@@ -9,7 +7,25 @@ public class KillZone : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            int curLife = MinusLife();
+            if (curLife == 0)
+            {
+                Debug.Log("No life left. Open popup window to watch Ads...");
+                gameObject.GetComponent<PopupOpener>().OpenPopup();
+            }
+
 			col.gameObject.GetComponent<CharacterControls>().LoadCheckPoint();
 		}
 	}
+
+
+    private int MinusLife()
+    {
+        int curLife = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_LIFE_COUNT);
+        if (--curLife < 0) curLife = 0;
+
+        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_LIFE_COUNT, curLife);
+
+        return curLife;
+    }
 }

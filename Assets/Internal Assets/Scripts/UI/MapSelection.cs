@@ -16,7 +16,7 @@ public class MapSelection : MonoBehaviour
 
     public void Start()
     {
-        selectedMap = PlayerPrefs.GetInt("selectedMap");
+        selectedMap = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_SELECTED_MAP);
         UpdateMap();
     }
 
@@ -32,7 +32,7 @@ public class MapSelection : MonoBehaviour
     {
         Debug.Log("In previous map: " + selectedMap);
         selectedMap = (--selectedMap + maps.Length) % maps.Length;
-        PlayerPrefs.SetInt("selectedMap", selectedMap);
+        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_SELECTED_MAP, selectedMap);
         UpdateMap();
     }
 }

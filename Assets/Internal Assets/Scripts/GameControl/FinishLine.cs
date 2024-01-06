@@ -10,7 +10,8 @@ public class FinishLine : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            string startTime = PlayerPrefs.GetString("startLevelTime");
+            string startTime = PlayerPrefs.GetString(Constants.PLAYER_PREFAB_START_LEVEL_TIME);
+
             if (string.IsNullOrEmpty(startTime))
             {
                 Debug.LogError("Unable to find `startLevelTime`..");
@@ -18,8 +19,10 @@ public class FinishLine : MonoBehaviour
 	        {
                 DateTime startDateTime = DateTime.Parse(startTime);
                 int duration = (int)(DateTime.UtcNow - startDateTime).TotalSeconds;
-                PlayerPrefs.SetInt("levelDurationInSeconds", duration);
-                PlayerPrefs.SetInt("completedGameCount", PlayerPrefs.GetInt("completedGameCount") + 1);
+
+                PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_LEVEL_DURATION_IN_SECONDS, duration);
+                PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_COMPLETED_GAME_COUNT,
+		            PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_COMPLETED_GAME_COUNT) + 1);
             }
 
             // Load the last one

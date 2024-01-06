@@ -15,7 +15,7 @@ public class GameScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int duration = PlayerPrefs.GetInt("levelDurationInSeconds");
+        int duration = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_LEVEL_DURATION_IN_SECONDS);
         // TODO: add difficulty as a parameter before 1000.
         if (duration < 10) {
             duration = 10;
@@ -23,9 +23,9 @@ public class GameScore : MonoBehaviour
 
         int addedScore = (1000 / duration);
 
-        int oldScore = PlayerPrefs.GetInt("totalScore");
+        int oldScore = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_TOTAL_SCORE);
         int newScore = oldScore + addedScore;
-        PlayerPrefs.SetInt("totalScore", newScore);
+        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_TOTAL_SCORE, newScore);
 
         Debug.Log("the duration: " + duration);
 

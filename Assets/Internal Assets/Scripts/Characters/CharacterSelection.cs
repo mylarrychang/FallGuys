@@ -21,7 +21,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void Start()
     {
-        selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
+        selectedCharacter = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_SELECTED_CHARACTER);
         UpdateCharacter();
     }
 
@@ -41,8 +41,8 @@ public class CharacterSelection : MonoBehaviour
 
     public void StartGame()
     {
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        int mapIndex = PlayerPrefs.GetInt("selectedMap");
+        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_SELECTED_CHARACTER, selectedCharacter);
+        int mapIndex = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_SELECTED_MAP);
         SceneManager.LoadScene(mapIndex + 1, LoadSceneMode.Single);
     }
 
@@ -59,7 +59,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void StartNetworkGameClient()
     {
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_SELECTED_CHARACTER, selectedCharacter);
         PlayerPrefs.SetInt("isClient", 0);
 
         // TODO: 2 is network level 1
