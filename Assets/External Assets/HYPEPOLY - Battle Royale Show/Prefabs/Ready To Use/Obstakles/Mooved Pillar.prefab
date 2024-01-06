@@ -4854,6 +4854,7 @@ GameObject:
   - component: {fileID: 5840628879520914709}
   - component: {fileID: 5840628879520914710}
   - component: {fileID: 5840628879520914708}
+  - component: {fileID: 2526183312119256734}
   m_Layer: 0
   m_Name: Mooved Pillar
   m_TagString: Untagged
@@ -4903,6 +4904,7 @@ MonoBehaviour:
   isDynamicFence: 0
   fenceLength: 10
   fencePillarsFrequency: 2
+  fenceScaleMultiplier: 18
   myPs: {fileID: 4611933296914002780}
 --- !u!114 &5840628879520914708
 MonoBehaviour:
@@ -4936,6 +4938,20 @@ MonoBehaviour:
   - {fileID: 7422668571674459646}
   - {fileID: 3491397513580368426}
   - {fileID: 5833981875947706279}
+--- !u!114 &2526183312119256734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840628879520914711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 10
+  stunTime: 0.5
 --- !u!1001 &5840628878010203557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5154,8 +5170,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6936885638726306970, guid: de121d51ae3259743a64fd344b6e0bf7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5910084947988733213}
   m_SourcePrefab: {fileID: 100100000, guid: de121d51ae3259743a64fd344b6e0bf7, type: 3}
+--- !u!1 &3551881849604606823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6936885638726306970, guid: de121d51ae3259743a64fd344b6e0bf7, type: 3}
+  m_PrefabInstance: {fileID: 5840628878201931773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5910084947988733213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551881849604606823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 20
+  stunTime: 0.5
 --- !u!4 &5833981875947706279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 141971819878109274, guid: de121d51ae3259743a64fd344b6e0bf7, type: 3}

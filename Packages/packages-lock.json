@@ -7,6 +7,15 @@
       "dependencies": {},
       "hash": "17c6330d51a140eac037b9ea6f5d157a846535af"
     },
+    "com.unity.ads": {
+      "version": "4.4.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.burst": {
       "version": "1.8.11",
       "depth": 2,

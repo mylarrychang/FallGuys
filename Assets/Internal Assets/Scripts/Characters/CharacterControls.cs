@@ -15,11 +15,14 @@ public class CharacterControls : MonoBehaviour {
 	public float maxFallSpeed = 20.0f;
 	public float rotateSpeed = 25f; //Speed the player rotate
 
+	protected FallGuy playerInput;
+
 	public GameObject cam;
-	public Button jumpButton;
+	// public Button jumpButton;
 
 	private Vector3 moveDir;
 	private Rigidbody rb;
+	private Animator animator;
 
 	private float distToGround;
 
@@ -30,6 +33,7 @@ public class CharacterControls : MonoBehaviour {
 	private Vector3 pushDir;
 
 	[SerializeField] private Joystick joystick;
+	private enum MoveMentState { idel, running, jumping, failing };
 
 	public Vector3 checkPoint;
 	private bool slide = false;
@@ -37,6 +41,8 @@ public class CharacterControls : MonoBehaviour {
 	void  Start (){
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
+		animator = GetComponent<Animator>();
+		/*
 		jumpButton.onClick.AddListener(() =>
 		{
 			if (IsGrounded())
@@ -44,6 +50,7 @@ public class CharacterControls : MonoBehaviour {
 				rb.velocity = new Vector3(rb.velocity.x, CalculateJumpVerticalSpeed(), rb.velocity.z);
 			}
 		});
+		*/
 	}
 	
 	bool IsGrounded (){
@@ -57,8 +64,10 @@ public class CharacterControls : MonoBehaviour {
 
 		checkPoint = transform.position;
 		Cursor.visible = false;
+		playerInput = new FallGuy();
+		playerInput.Enable();
 	}
-	
+
 	void FixedUpdate () {
 		if (canMove)
 		{
@@ -102,13 +111,13 @@ public class CharacterControls : MonoBehaviour {
 					//Debug.Log(rb.velocity.magnitude);
 				}
 
-				/*
-				// Jump
-				if (IsGrounded() && Input.GetButton("Jump"))
+				// Jump Only used by keyboard....
+				bool jumpPress = playerInput.Player.Jump.triggered;
+
+				if (IsGrounded() && (Input.GetButton("Jump") || jumpPress))
 				{
 					rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
 				}
-				*/
 			}
 			else
 			{
@@ -138,14 +147,15 @@ public class CharacterControls : MonoBehaviour {
 	}
 
 	private void Update()
-	{
-		/*
+	{ 
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
-		*/
 
-		float h = joystick.Horizontal;
-		float v = joystick.Vertical;
+		if (h > -.1f && h < .1f && v > -.1f && v < .1f)
+		{ 
+			h = joystick.Horizontal;
+			v = joystick.Vertical;
+		}
 
 		// buggy: used by both joystick and keyboard.
 		/*
@@ -154,6 +164,7 @@ public class CharacterControls : MonoBehaviour {
 			v = joystick.Vertical;
 		}
 		*/
+		AnimationUpdate(h, v);
 
 		Vector3 v2 = v * cam.transform.forward; //Vertical axis to which I want to move with respect to the camera
 		Vector3 h2 = h * cam.transform.right; //Horizontal axis to which I want to move with respect to the camera
@@ -171,6 +182,7 @@ public class CharacterControls : MonoBehaviour {
 				slide = false;
 			}
 		}
+
 	}
 
 	float CalculateJumpVerticalSpeed () {
@@ -224,5 +236,30 @@ public class CharacterControls : MonoBehaviour {
 			isStuned = false;
 			canMove = true;
 		}
+	}
+
+	private void AnimationUpdate(float dirX, float dirY)
+	{
+		MoveMentState state;
+
+		if (dirX > .1f || dirX < -.1f || dirY >.1f || dirY < -.1f)
+		{
+			state = MoveMentState.running;
+		}
+		else
+		{
+			state = MoveMentState.idel;
+		}
+
+		if (rb.velocity.y > .1f)
+		{
+			state = MoveMentState.jumping;
+		}
+		else if (rb.velocity.y < -.1f)
+		{
+			state = MoveMentState.failing;
+		}
+
+		animator.SetInteger("state", (int)state);
 	}
 }

@@ -4950,6 +4950,8 @@ GameObject:
   - component: {fileID: 9075975285491271764}
   - component: {fileID: 6003447201747515046}
   - component: {fileID: 4641334457736939880}
+  - component: {fileID: 8619339730626143247}
+  - component: {fileID: 2650490341952323937}
   m_Layer: 0
   m_Name: Rotated Hammer
   m_TagString: Untagged
@@ -4999,6 +5001,7 @@ MonoBehaviour:
   isDynamicFence: 0
   fenceLength: 10
   fencePillarsFrequency: 2
+  fenceScaleMultiplier: 18
   myPs: {fileID: 4756348816278278184}
 --- !u!114 &4641334457736939880
 MonoBehaviour:
@@ -5013,6 +5016,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 2, z: 0}
+--- !u!114 &8619339730626143247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815930593548611326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 10
+  stunTime: 0.5
+--- !u!114 &2650490341952323937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815930593548611326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6359d87c22a014bb9897f1f823aca348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1514960461585690291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5141,7 +5170,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7656175414002420999, guid: fde6bc9efcacde045a0dfba11adc93e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4756348816278278182}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 343308121537354038, guid: fde6bc9efcacde045a0dfba11adc93e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8890877402402643282}
   m_SourcePrefab: {fileID: 100100000, guid: fde6bc9efcacde045a0dfba11adc93e7, type: 3}
 --- !u!23 &1555008589076982940 stripped
 MeshRenderer:
@@ -5153,6 +5185,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7656175414002420999, guid: fde6bc9efcacde045a0dfba11adc93e7, type: 3}
   m_PrefabInstance: {fileID: 4620021259949460853}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4962456827741066307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 343308121537354038, guid: fde6bc9efcacde045a0dfba11adc93e7, type: 3}
+  m_PrefabInstance: {fileID: 4620021259949460853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8890877402402643282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4962456827741066307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 10
+  stunTime: 0.5
 --- !u!1001 &6803373878821355574
 PrefabInstance:
   m_ObjectHideFlags: 0

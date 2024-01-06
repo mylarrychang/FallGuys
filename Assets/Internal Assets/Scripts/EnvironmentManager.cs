@@ -8,6 +8,6 @@ public class EnvironmentManager : MonoBehaviour
     {
         // Clean up all of the PlayerPrefs when quiting the game..
         Debug.Log("[Debug] Should only be started once");
-        PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteAll();
     }
 }

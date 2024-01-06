@@ -16,7 +16,6 @@ public class WNDMoover : MonoBehaviour
     void Start()
     {
         posToMoove = new List<Vector3>();
-        speed = Random.Range(0.1f, 0.4f);
 
         for (int i = 0; i < objsToMoove.Count; i++)
         {
@@ -33,7 +32,7 @@ public class WNDMoover : MonoBehaviour
             }
         }
 
-        RandomStartPos();
+        if (randomStartPos) RandomStartPos();
     }
     void RandomStartPos()
     {
@@ -41,7 +40,7 @@ public class WNDMoover : MonoBehaviour
         {
             if (objsToMoove[i] != null)
             {
-                objsToMoove[i].localPosition = Vector3.Lerp(objsToMoove[i].localPosition, posToMoove[i], Random.Range(0f,3f));
+                objsToMoove[i].localPosition = Vector3.Lerp(objsToMoove[i].localPosition, posToMoove[i], Random.Range(0f,1f));
             }
         }
     }

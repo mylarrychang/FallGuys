@@ -42,7 +42,8 @@ public class CharacterSelection : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        int mapIndex = PlayerPrefs.GetInt("selectedMap");
+        SceneManager.LoadScene(mapIndex + 1, LoadSceneMode.Single);
     }
 
     public void StartNetworkGameHost()

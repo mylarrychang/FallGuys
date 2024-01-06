@@ -24,6 +24,7 @@ namespace Ricimi
             var popup = Instantiate(popupPrefab) as GameObject;
             popup.SetActive(true);
             popup.transform.localScale = Vector3.zero;
+            // popup.transform.localScale = new Vector3(1000f, 0f, 0f);
             popup.transform.SetParent(m_canvas.transform, false);
             popup.GetComponent<Popup>().Open();
         }

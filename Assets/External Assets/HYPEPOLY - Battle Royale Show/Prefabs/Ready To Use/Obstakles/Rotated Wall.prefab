@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5238906980123488382
 Transform:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5498645470532081217
 Transform:
   m_ObjectHideFlags: 0
@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 5498645472107704374}
   - component: {fileID: 5498645472107704369}
   - component: {fileID: 5498645472107704368}
+  - component: {fileID: 1079292835901998772}
   m_Layer: 0
   m_Name: Rotated Wall
   m_TagString: Untagged
@@ -560,6 +561,7 @@ MonoBehaviour:
   isDynamicFence: 0
   fenceLength: 10
   fencePillarsFrequency: 2
+  fenceScaleMultiplier: 18
   myPs: {fileID: 4756348816199691955}
 --- !u!114 &5498645472107704368
 MonoBehaviour:
@@ -574,6 +576,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 2, z: 0}
+--- !u!114 &1079292835901998772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498645472107704371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 10
+  stunTime: 0.5
 --- !u!1 &8333795523806368334
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,8 @@ public class WNDPrefabVariator : MonoBehaviour
 
     public float fencePillarsFrequency = 2f;
 
+    public float fenceScaleMultiplier = 18f;
+
     public ParticleSystem myPs;
     public bool hasStyle
     {
@@ -279,7 +281,7 @@ public class WNDPrefabVariator : MonoBehaviour
     public void RefreshPillars()
     {
         Transform mainPart = types[selectedType].GetChild(selectedColor).GetChild(0).GetChild(selectedStyle).transform;
-        mainPart.localScale = new Vector3(1f, 1f, 1f * (fenceLength / 18f));
+        mainPart.localScale = new Vector3(1f, 1f, 1f * (fenceLength / fenceScaleMultiplier));
 
         int currentPillarsCount = types[selectedType].GetChild(selectedColor).GetChild(1).GetChild(selectedPillars).childCount;
         for (int i = currentPillarsCount - 1; i >= 0; i--)

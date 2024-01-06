@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8203928920311597962}
   - component: {fileID: 7257446875576726363}
   - component: {fileID: 1402909783}
+  - component: {fileID: 276810732036526768}
   m_Layer: 0
   m_Name: Rotated Stick
   m_TagString: Untagged
@@ -62,6 +63,7 @@ MonoBehaviour:
   isDynamicFence: 0
   fenceLength: 10
   fencePillarsFrequency: 2
+  fenceScaleMultiplier: 18
   myPs: {fileID: 4756348815590313255}
 --- !u!114 &1402909783
 MonoBehaviour:
@@ -76,6 +78,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 2, z: 0}
+--- !u!114 &276810732036526768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503385578143984380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6359d87c22a014bb9897f1f823aca348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &716145314354308181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1490,7 @@ GameObject:
   - component: {fileID: 306732957710290684}
   - component: {fileID: 5355143793316182771}
   - component: {fileID: 7987133367542846518}
+  - component: {fileID: 4117267014710236067}
   m_Layer: 0
   m_Name: Stick Small_2
   m_TagString: Untagged
@@ -1571,6 +1586,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1239564544883406434, guid: e5909e6c07df7474dbbae1a47853e8bb, type: 3}
+--- !u!114 &4117267014710236067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818921144807715340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 20
+  stunTime: 1
 --- !u!1 &5061243924125831284
 GameObject:
   m_ObjectHideFlags: 0

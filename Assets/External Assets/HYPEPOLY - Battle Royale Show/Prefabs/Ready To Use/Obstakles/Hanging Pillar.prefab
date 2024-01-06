@@ -171,6 +171,7 @@ MonoBehaviour:
   isDynamicFence: 0
   fenceLength: 10
   fencePillarsFrequency: 2
+  fenceScaleMultiplier: 18
   myPs: {fileID: 4756348816488786933}
 --- !u!95 &1360066750885619261
 Animator:
@@ -6356,7 +6357,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7719826991663359169, guid: 6334ef597223dce44a8db8b7d2ccc17a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4756348816488786939}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6020697554034664094, guid: 6334ef597223dce44a8db8b7d2ccc17a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4981462588990224239}
   m_SourcePrefab: {fileID: 100100000, guid: 6334ef597223dce44a8db8b7d2ccc17a, type: 3}
 --- !u!23 &1141548040268714632 stripped
 MeshRenderer:
@@ -6368,3 +6372,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7719826991663359169, guid: 6334ef597223dce44a8db8b7d2ccc17a, type: 3}
   m_PrefabInstance: {fileID: 8931781230303551016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2916607639875108022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6020697554034664094, guid: 6334ef597223dce44a8db8b7d2ccc17a, type: 3}
+  m_PrefabInstance: {fileID: 8931781230303551016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4981462588990224239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916607639875108022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 30
+  stunTime: 0.5

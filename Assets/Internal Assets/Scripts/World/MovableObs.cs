@@ -15,6 +15,7 @@ public class MovableObs : MonoBehaviour
     void Awake()
     {
 		startPos = transform.position;
+
 		if (horizontal)
 			transform.position += Vector3.right * offset;
 		else
