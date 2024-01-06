@@ -2426,6 +2426,7 @@ GameObject:
   - component: {fileID: 9215193326812298865}
   - component: {fileID: 7218109853856926116}
   - component: {fileID: 9215193326823854743}
+  - component: {fileID: 4378537607872898202}
   m_Layer: 5
   m_Name: Close Button
   m_TagString: Untagged
@@ -2515,6 +2516,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11432972}
         m_TargetAssemblyTypeName: 
         m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4378537607872898202}
+        m_TargetAssemblyTypeName: ProfileUi, Assembly-CSharp
+        m_MethodName: CloseWindow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2641,6 +2654,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4378537607872898202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215193326819294209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4886c2b605b904f008f75a62fe1ef9b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9215193326819346187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,7 +3100,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4144394409371268541, guid: 36e3354f4cf184720b479aa0f5e82546, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

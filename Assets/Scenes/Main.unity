@@ -2391,18 +2391,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1023075322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2864486698458529160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf7a3d484399464180c9756df91cdc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1026361547
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,7 +7085,6 @@ GameObject:
   - component: {fileID: 2864486698458529175}
   - component: {fileID: 5585583631935372309}
   - component: {fileID: 4824422253314980816}
-  - component: {fileID: 1023075322}
   - component: {fileID: 2864486698458529174}
   m_Layer: 5
   m_Name: Start
@@ -7816,18 +7803,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1023075322}
-        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
-        m_MethodName: MainPage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7773103108234721340}
         m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
         m_MethodName: StartGame
@@ -7984,6 +7959,7 @@ GameObject:
   - component: {fileID: 1104327387540080624}
   - component: {fileID: 7773103108234721339}
   - component: {fileID: 7773103108234721340}
+  - component: {fileID: 7773103108234721341}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -8059,6 +8035,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   style: {fileID: 1045913817}
+--- !u!114 &7773103108234721341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445268537641858267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729d3571ed7354ba184275ba6042151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupPrefab: {fileID: 169892, guid: 710a9758fda87457a974ff8875d864cd, type: 3}
 --- !u!95 &7904281977055069422
 Animator:
   serializedVersion: 5

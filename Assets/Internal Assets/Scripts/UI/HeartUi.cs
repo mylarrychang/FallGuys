@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LifeUiDisplay : MonoBehaviour
+public class HeartUi : MonoBehaviour
 {
     public Image red;
     public Image gray;
-    public GameObject[] imageGameObjects;
+    public GameObject[] heartArray;
 
     private int lifeCount;
 
@@ -18,13 +18,13 @@ public class LifeUiDisplay : MonoBehaviour
 
         for (int i = 0; i < lifeCount; i++)
         {
-            GameObject obj = imageGameObjects[i];
+            GameObject obj = heartArray[i];
             obj.GetComponent<Image>().sprite = red.sprite;
 	    }
 
-        for (int i = lifeCount; i < imageGameObjects.Length; i++)
+        for (int i = lifeCount; i < heartArray.Length; i++)
         { 
-            GameObject obj = imageGameObjects[i];
+            GameObject obj = heartArray[i];
             obj.GetComponent<Image>().sprite = gray.sprite;
 	    }
     }

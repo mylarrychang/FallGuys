@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Netcode;
+using Ricimi;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,7 +41,16 @@ public class CharacterSelection : MonoBehaviour
     {
         PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_SELECTED_CHARACTER, selectedCharacter);
         int mapIndex = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_SELECTED_MAP);
-        SceneManager.LoadScene(mapIndex + 1, LoadSceneMode.Single);
+
+        int lifeCount = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_LIFE_COUNT);
+        if(lifeCount > 0)
+        { 
+            SceneManager.LoadScene(mapIndex + 1, LoadSceneMode.Single);
+	    }
+        else
+	    {
+            gameObject.GetComponent<PopupOpener>().OpenPopup();
+	    }
     }
 
     public void StartNetworkGameHost()
