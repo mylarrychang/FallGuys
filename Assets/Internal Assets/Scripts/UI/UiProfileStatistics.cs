@@ -11,12 +11,12 @@ public class UiProfileStatistics : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int totalScore = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_TOTAL_SCORE);
+        int totalScore = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_TOTAL_COINS);
         scoreText.text = totalScore.ToString();
 
-        int completedGameCount = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_COMPLETED_GAME_COUNT);
-        completedGamesText.text = completedGameCount.ToString();
+        int crownCount = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_TOTAL_CROWNS);
+        completedGamesText.text = crownCount.ToString();
 
-        Debug.Log("total score: " + totalScore + " games: " + completedGameCount);
+        Debug.Log("total score: " + totalScore + " crowns: " + crownCount);
     }
 }

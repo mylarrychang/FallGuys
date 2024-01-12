@@ -21,8 +21,11 @@ public class FinishLine : MonoBehaviour
                 int duration = (int)(DateTime.UtcNow - startDateTime).TotalSeconds;
 
                 PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_LEVEL_DURATION_IN_SECONDS, duration);
-                PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_COMPLETED_GAME_COUNT,
-		            PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_COMPLETED_GAME_COUNT) + 1);
+
+                /*
+                PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_CROWN_COUNT,
+		            PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_CROWN_COUNT) + 1);
+                */
             }
 
             // Load the last one

@@ -14,6 +14,7 @@ public class CharacterControls : MonoBehaviour {
 	public float jumpHeight = 2.0f;
 	public float maxFallSpeed = 20.0f;
 	public float rotateSpeed = 25f; //Speed the player rotate
+	[SerializeField] private AudioSource jumpSound;
 
 	protected FallGuy playerInput;
 
@@ -42,15 +43,6 @@ public class CharacterControls : MonoBehaviour {
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
 		animator = GetComponent<Animator>();
-		/*
-		jumpButton.onClick.AddListener(() =>
-		{
-			if (IsGrounded())
-			{
-				rb.velocity = new Vector3(rb.velocity.x, CalculateJumpVerticalSpeed(), rb.velocity.z);
-			}
-		});
-		*/
 	}
 	
 	bool IsGrounded (){
@@ -116,6 +108,8 @@ public class CharacterControls : MonoBehaviour {
 
 				if (IsGrounded() && (Input.GetButton("Jump") || jumpPress))
 				{
+					jumpSound.Play();
+					Debug.Log("Playing jump sound... ");
 					rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
 				}
 			}
@@ -182,7 +176,6 @@ public class CharacterControls : MonoBehaviour {
 				slide = false;
 			}
 		}
-
 	}
 
 	float CalculateJumpVerticalSpeed () {

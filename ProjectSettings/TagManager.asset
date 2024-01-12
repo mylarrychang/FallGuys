@@ -11,6 +11,7 @@ TagManager:
   - New tag
   - Login
   - Start
+  - Canvas
   layers:
   - Default
   - TransparentFX

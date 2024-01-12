@@ -27,6 +27,7 @@ public class CharacterSelection : MonoBehaviour
     {
         Debug.Log("In next character: " + selectedCharacter);
         selectedCharacter = (selectedCharacter + 1) % style.meshes.Length;
+        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_SELECTED_CHARACTER, selectedCharacter);
         UpdateCharacter();
     }
 
@@ -34,12 +35,13 @@ public class CharacterSelection : MonoBehaviour
     {
         Debug.Log("In previous character: " + selectedCharacter);
         selectedCharacter = (--selectedCharacter + style.meshes.Length) % style.meshes.Length;
+        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_SELECTED_CHARACTER, selectedCharacter);
         UpdateCharacter();
     }
 
+    /*
     public void StartGame()
     {
-        PlayerPrefs.SetInt(Constants.PLAYER_PREFAB_SELECTED_CHARACTER, selectedCharacter);
         int mapIndex = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_SELECTED_MAP);
 
         int lifeCount = PlayerPrefs.GetInt(Constants.PLAYER_PREFAB_LIFE_COUNT);
@@ -52,6 +54,7 @@ public class CharacterSelection : MonoBehaviour
             gameObject.GetComponent<PopupOpener>().OpenPopup();
 	    }
     }
+    */
 
     public void StartNetworkGameHost()
     {
