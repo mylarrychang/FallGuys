@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.46337664, g: 0.62167645, b: 0.8396226, a: 1}
+  m_Color: {r: 0.4627451, g: 0.8392157, b: 0.77828664, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -293,6 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4090456446333772075}
+  - component: {fileID: 898991812591925333}
   m_Layer: 5
   m_Name: Crowns
   m_TagString: Untagged
@@ -322,3 +323,16 @@ RectTransform:
   m_AnchoredPosition: {x: -765, y: -46}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &898991812591925333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7550307336108271982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752c7e4534e1548518e6cdd25b05d109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crownsText: {fileID: 641380739620743954}

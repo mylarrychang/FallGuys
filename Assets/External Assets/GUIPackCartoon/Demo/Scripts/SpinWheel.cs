@@ -12,6 +12,8 @@ namespace Ricimi
     {
         // This animation curve drives the spin wheel motion.
         public AnimationCurve AnimationCurve;
+        public float time = 3f;
+        public float maxAngle = 270.0f;
 
         private bool m_spinning = false;
 
@@ -26,9 +28,6 @@ namespace Ricimi
             m_spinning = true;
             var timer = 0.0f;
             var startAngle = transform.eulerAngles.z;
-
-            var time = 3.0f;
-            var maxAngle = 270.0f;
 
             while (timer < time)
             {

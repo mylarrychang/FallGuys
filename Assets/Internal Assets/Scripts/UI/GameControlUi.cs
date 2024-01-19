@@ -15,6 +15,8 @@ public class GameControlUi : MonoBehaviour
     public Image playButtonImage = default;
     public Image grayButtonImage = default;
 
+    public Button characterSelection = default;
+
     public float switchDuration = 0.5f;
     public int mapIndex = 0;
 
@@ -26,6 +28,7 @@ public class GameControlUi : MonoBehaviour
         slideHolder.SetActive(false);
         spin.SetActive(true);
         play.interactable = true;
+        characterSelection.interactable = true;
 
         mapIndex = Random.Range(0, slides.Count);
         Debug.Log("MapIndex: " + mapIndex);
@@ -39,6 +42,7 @@ public class GameControlUi : MonoBehaviour
             slideHolder.SetActive(true);
             spin.SetActive(false);
             play.interactable = false;
+            characterSelection.interactable = false;
             playButtonImage.sprite = grayButtonImage.sprite;
 
             StartCoroutine(WaitToNextSlide());

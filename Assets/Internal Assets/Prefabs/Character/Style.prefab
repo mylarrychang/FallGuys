@@ -50,27 +50,15 @@ MonoBehaviour:
   - {fileID: 4300012, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
   - {fileID: 4300016, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
   - {fileID: 4300010, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
-  - {fileID: 4300002, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
-  - {fileID: 4300006, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
-  - {fileID: 4300018, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
-  - {fileID: 4300004, guid: 67224266d873c4d6499561c734dc68e6, type: 3}
   materials:
   - {fileID: 2100000, guid: eabbb085e6565429a87ed0c501d4afda, type: 2}
   - {fileID: 2100000, guid: 3deb399eba70a4fff80e02a3daed660c, type: 2}
   - {fileID: 2100000, guid: 19f853f9ac9404cb1a4ab42902b19437, type: 2}
   - {fileID: 2100000, guid: 996ef1533dff84eaaab65486d0aef265, type: 2}
   - {fileID: 2100000, guid: de73ca16265e944e8bb8dd1de609cbb2, type: 2}
-  - {fileID: 2100000, guid: 8dba92f31f33146d5bc5a037128c4231, type: 2}
-  - {fileID: 2100000, guid: 774ce2d7aee494528980077e8e22b343, type: 2}
-  - {fileID: 2100000, guid: 0031d703677d34f0bbc30cb4e6fe3e9f, type: 2}
-  - {fileID: 2100000, guid: d568be3d2e6cb436d955e0f0ed071b1a, type: 2}
   names:
   - DJ
   - Doctor
   - FoodDelievery
   - GymInstructor
   - HoodieCap
-  - Nurse
-  - RedDress
-  - Thief
-  - Waiter
